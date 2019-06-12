@@ -1,4 +1,84 @@
 <html>
-<h1>Hello World!</h1>
-<h2>Two</h2>
+<head>
+<title>Yi Han</title>
+<style>
+body,td{
+    font-family:arial;
+    font-size:12px;
+    line-height:150%;
+}
+
+.projects>li{
+    font-family:arial;
+    font-size:13px;
+    font-weight:bold;
+}
+</style>
+<script>
+var tabSelected = 1;
+function tabSwitch(tabNumber){
+    if(tabNumber == 1){
+        tabSelected = 1;
+        document.getElementById("content_frame").src = "projects.html";
+        document.getElementById("projects_tab").style.fontWeight = "bold";
+        document.getElementById("publications_tab").style.fontWeight = "normal";
+    }else if(tabNumber == 2){
+        tabSelected = 2;
+        document.getElementById("content_frame").src = "publications.html";
+        document.getElementById("projects_tab").style.fontWeight = "normal";
+        document.getElementById("publications_tab").style.fontWeight = "bold";
+    }
+}
+
+function setSelectedColor(){
+    if(tabSelected == 1){
+        document.getElementById("projects_tab").style.color = "black";
+        document.getElementById("publications_tab").style.color = "gray";
+    }else if(tabSelected == 2){
+        document.getElementById("projects_tab").style.color = "gray";
+        document.getElementById("publications_tab").style.color = "black";
+    }
+}
+
+function scrollYPosition(){    
+    return window.pageYOffset;
+}
+
+</script>
+</head>
+<body>
+<table cellpadding="10" width="1024">
+<tr>
+<td width="100" rowspan="3">
+<img src="images/1.jpg" width="150" border="1">
+</td>
+<td>
+<img src="images/2.png"><br>
+<span style="font-size:22px">Yi Han</span>
+<hr>
+<img src="images/3.png">
+</td>
+<td colspan="3">
+
+<h3 style="color:orange">Applying Visual Analytics to Large-Scale Data Analysis</h3>
+Yi is a Research Principle Engineer at Delta Electronics. 
+He received the B.B.A degree in Information Management at National Central Universtiy, Taiwan, and both the M.S. and Ph.D. degrees in Computer Science at Georgia Institute of Technology.
+He specializes in the application of visual analytics and has a broad research interest in its intersection with human-computer interaction and ubiquitous computing. 
+The broad research interest can date back to before his Ph.D. studies where he held research positions at VTT Technical Research Centre of Finland, MIT, and Disney Imagineering Research. 
+In his dissertation, advised by Drs. Gregory D. Abowd and John Stasko, he investigated how visual analytics can be applied to analyzing interaction logs of visualization applications. 
+In the future, he is particularly interested in the application of visual analytics in big data analytics where interactive visualizations can not only provide an information-rich front-end user interface but also exploratory analysis capabilities to existing computational analysis platforms.
+
+</td>
+</tr>
+<tr>
+<td></td>
+<td width="100"><span id="projects_tab" onmouseover="this.style.color='black'" onmouseout="this.style.color='gray';setSelectedColor(1)" onclick="tabSwitch(1)" style="font-size:20px;font-weight:bold;color:black;text-decoration:none;cursor:pointer">PROJECTS</span></td>
+<td><span id="publications_tab" onmouseover="this.style.color='black'" onmouseout="this.style.color='gray';setSelectedColor(2)" style="font-size:20px;color:gray;text-decoration:none;cursor:pointer" onclick="tabSwitch(2)">PUBLICATIONS</span></td>
+</tr>
+</table>
+<hr>
+<div>
+    <iframe id="content_frame" src="projects.html" width="1024" height="1830" frameBorder="0" scrolling="no" style="overflow:hidden"></iframe>
+</div>
+</body>
 </html>
