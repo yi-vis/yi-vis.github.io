@@ -1,0 +1,235 @@
+<style>
+body,td{
+    font-family:arial;
+    font-size:12px;
+    line-height:150%
+}
+
+.projects>li{
+    font-family:arial;
+    font-size:13px;
+    font-weight:bold;
+}
+</style>
+<script>
+function zoomImage(zoomedImage){
+
+    var zoomStatus = document.getElementById("zoomedView").style.display;
+    if(zoomStatus == "block"){
+        zoomedImage.style.cursor = 'zoom-in';
+        document.getElementById('zoomedView').style.display = 'none';
+        document.getElementById('backgroundMask').style.display = 'none';
+    }else{
+        zoomedImage.style.cursor = 'zoom-out';
+        document.getElementById("zoomedView").style.display = "block";
+        document.getElementById("zoomedImage").src = zoomedImage.src;
+        document.getElementById('backgroundMask').style.display = 'block';
+
+        // show at mouse position
+//         document.getElementById('zoomedView').style.top = window.event.clientY;
+
+    }
+
+    var dimension = zoomedImage.naturalHeight/zoomedImage.naturalWidth;
+    if(dimension > 0.8){
+        if(zoomedImage.src.endsWith("text.png")){
+            document.getElementById('zoomedView').style.width = 300;
+        }else{
+            document.getElementById('zoomedView').style.width = 600;           
+        }
+    }else{
+        document.getElementById('zoomedView').style.width = null;
+    }
+
+//     document.getElementById('zoomedView').style.width = zoomedImage.naturalWidth;
+    document.getElementById('zoomedView').style.top = parent.scrollYPosition();
+    
+}
+
+function clickZoomedImage(){
+    document.getElementById('zoomedView').style.display = 'none';
+    var unzoomedImages = document.getElementsByClassName('unzoomedImageClass');
+    for(var i=0; i<unzoomedImages.length; i++){
+        unzoomedImages[i].style.cursor = 'zoom-in';
+    }
+    document.getElementById('backgroundMask').style.display = 'none';
+}
+
+</script>
+<base target="_parent"/>
+<h2>Projects</h2>
+<ul class="projects">
+
+<li>IntiVisor: Analyzing Visualization Interactions using Visual Analytics</li>
+<table cellpadding="20">
+<tr valign="top">
+    <td width="200">
+    <h1><img class="unzoomedImageClass" src="images/intivisor.png" width="200" border="1" onclick="zoomImage(this)" style="cursor:zoom-in"></h1>
+    </td>
+    <td>    
+    <table>
+        <tr>
+            <td width="110" align="right" valign="top"><b>Summary:</b></td>
+            <td>IntiVisor is a visual analytics system that provides both <span style="font-style:italic">flexibility</span> and <span style="font-style:italic">practicality</span> with five visualization views in the analysis process of user interactions logged from visualization applications. 
+            The system visually supports the flexible event organization as well as the typical usage pattern discovery process. 
+            The event organization is innovatively supported through a set of interactive visualizations that allow an analyst to interactively determine how events should be composed and categorized into more meaningful and analysis-relevant units.
+            After organization, usage patterns of these new units can be automatically or manually extracted with the latter views in multiple ways.
+            IntiVisor was evaluated with visualization usages from 5 visualization applications over 4 studies. 
+<!--             The first study involved potential users in the design process to improve the system. 
+            Two other studies evaluated the utility of the system with participants and interaction data from the visualization applications.  -->
+            The studies showed that the system was able to support analysts in discovering a large variety of useful patterns.
+            The project was a major part of Yi's doctoral thesis work.
+            </td>
+        </tr>
+        <tr>
+            <td width="110" align="right" valign="top"><b>Publications:</b></td>
+            <td>Doctoral Dissertation [<a href="https://smartech.gatech.edu/handle/1853/56345">link</a>]<br>
+            2016 IEEE VIS Workshop on Logging Interactive Visualizations & Visualizing Interaction Logs (LIVVIL) [<a href="papers/vis_16_livvil.pdf">paper</a>]<br>
+            2016 IEEE VIS Workshop on The Event Event: Temporal & Sequential Event Analysis [<a href="papers/vis_16_event_event.pdf">paper</a>]
+            </td>
+        </tr>
+    </table>
+    </td>
+</tr valign="top">
+</table>
+<hr>
+<li>CfD Visualization: Supporting Visual Analysis of Heterogenous Behavioral and Medical Data</li>
+<table cellpadding="20">
+<tr valign="top">
+    <td width="200">
+    <img class="unzoomedImageClass" src="images/cfd.png" width="200" border="1" onclick="zoomImage(this)" style="cursor:zoom-in">
+    <span style="font-size:11px">*Data are made up in this figure.</span>
+    </td>
+    <td>
+    <table>
+        <tr>
+            <td width="110" align="right" valign="top"><b>Summary:</b></td>
+            <td>The CfD Visualization is an interactive visualization application that supports the day-to-day data analysis needs in the Center for Discovery (<a href="https://www.thecenterfordiscovery.org">CfD</a>). 
+            The CfD is a school that provides care to people, most of whom are children, with significant medical complexities and developmental issues. 
+            Everyday, its staff collect a large amount of heterogenous behavioral and medical data from their students. 
+            These data are then integrated and visualized with the CfD visualization to help the CfD staff make informed, data-driven decisions.
+            The application has been deployed and integrated into the center's work practice for 2-3 years and currently provides 3 visualization views. 
+            During the deployment, the CfD changed its work practice on collecting and analyzing data because of the availability of the visualizations. 
+            Currently, the application is regularly used by 20-30 behavioral specialists/analysts at the center.
+            </td>
+        </tr>
+        <tr>
+            <td width="110" align="right" valign="top"><b></b></td>
+            <td></td>
+        </tr>
+    </table>
+    </td>
+</tr valign="top">
+</table>
+<hr>
+<li>TipoVis: Visualizing Proximal Temporal Relationships of Interval-based Events</li>
+<table cellpadding="20">
+<tr valign="top">
+    <td width="200">
+    <h1><img  class="unzoomedImageClass" src="images/tipovis.png" width="200" border="1" onclick="zoomImage(this)" style="cursor:zoom-in"></h1>
+    </td>
+    <td>    
+    <table>
+         <tr>
+            <td width="110" align="right" valign="top"><b>Summary:</b></td>
+            <td>TipoVis is a visual analytic system that uses overlapping colored bars to visualize interval-based events. 
+            The system supports flexible explorations of interval-based events that occur together or within close temporal proximity. 
+            One key innovation is that the system allows an analyst to interactively specify a time window around a type of event to visualize its <span style="font-style:italic">proximal temporal relationships</span> with another type of event.
+            The visualization technique was applied to visualizing social and communicative behaviors in developmental psychology research because it can effectively highlight individual multimodal coordination behaviors (e.g., gaze + speech) and dyadic interactions (e.g., give + take).
+            In two case studies, psychology researchers obtained new understandings of their data with TipoVis.
+            </td>
+        </tr>
+        <tr>
+            <td width="110" align="right" valign="top"><b>Publication:</b></td>
+            <td>EuroVis 2015 (Computer Graphics Forum) [<a href="papers/eurovis_15.pdf">paper</a>][<a href="papers/eurovis_15_video.mov">video</a>]</td>
+        </tr>
+    </table>
+    </td>
+</tr valign="top">
+</table>
+<hr>
+<li>Using Visualization to Explore Social and Communicative Behaviors</li>
+<table cellpadding="20">
+<tr valign="top">
+    <td width="200">
+    <h1><img class="unzoomedImageClass" src="images/behavis.png" width="200" border="1" onclick="zoomImage(this)" style="cursor:zoom-in"></h1>
+    </td>
+    <td>
+    <table>
+        <tr>
+            <td width="110" align="right" valign="top"><b>Summary:</b></td>
+            <td>This visual analytics system visualizes social and communicative behaviors with interconnected bar charts. 
+            The system helps developmental psychology researchers identify subgroups of children that exhibit similar behaviors at different stages of a social play protocol. 
+            In addition, researchers can use the system to compare a subgroup's behaviors with those from other children in the dataset.
+            The innovative aspect of the system is the use of interconnected, interactive bar charts to explore this type of behavioral data. 
+            In this work, the system was able to show psychology researchers a new way to examine their behavioral datasets at scale. 
+            </td>
+        </tr>
+        <tr>
+            <td width="110" align="right" valign="top"><b>Publications:</b></td>
+            <td>2013 Workshop on Visual Analytics in Healthcare (VAHC) [<a href="papers/vahc_13.pdf">paper</a>]<br>
+            2013 IEEE Information Visualization Conference poster</td>
+        </tr>
+    </table>
+    </td>
+</tr valign="top">
+</table>
+<hr>
+<li>Using Text Messaging to Support Adolescents with Type 1 Diabetes</li>
+<table cellpadding="20">
+<tr valign="middle">
+    <td width="200">
+<!--     <h1>Text Messaging</h1> -->
+    <h1><img class="unzoomedImageClass" src="images/text.png" width="200" border="1" onclick="zoomImage(this)" style="cursor:zoom-in"></h1>
+    </td>
+    <td>
+    <table>
+         <tr>
+            <td width="100" align="right" valign="top"><b>Summary:</b></td>
+            <td>A 3-month randomized controlled trial was conducted to study how a text messaging system, that periodically sends two types of questions to adolescents with Type 1 diabetes, can help manage their condition. 
+            The first type of questions prompt participants about their recent symptoms (e.g., In the past 4 weeks, did you ever have times when you passed out even for a short time? N = No Y = Yes/Don't know). 
+            The second type of questions prompt participants about their knowledge on diabetes (e.g., If you have diabetes, you should not exercise. F=FalseT=True). 
+            Text messaging was the communication medium of this study population at the time so the study hoped to leverage adolescents' familiarity and affinity to this mode of communication to engage them in the intervention.
+            Afterwards, health care providers of the participants can examine the responses through a web-based dashboard. To further facilitate access to this information, the responses can be printed into a one-page visualization for at-a-glance consumption during the participants clinical visits.
+            The study showed that the intervention group that received more text messages were able to achieve significant improvements in some quality of life measures.
+            </td>
+        </tr>
+        <tr>
+            <td width="100" align="right" valign="top"><b>Publication:</b></td>
+            <td>Journal of Pediatric Nursing (2015) [<a href="http://dx.doi.org/10.1016/j.pedn.2015.02.002">link</a>]</td>
+        </tr>
+    </table>
+    </td>
+</tr>
+</table>
+<hr>
+<li>Visual Analytics System for Radio Frequency Fingerprinting-based Localization Systems</li>
+<table cellpadding="20">
+<tr>
+    <td width="200">
+        <h1><img class="unzoomedImageClass" src="images/plpvis.png" width="200" border="1" style="cursor:zoom-in" onclick="zoomImage(this)"></h1>
+    </td>
+    <td>
+    <table>
+        <tr>
+            <td width="110" align="right" valign="top"><b>Summary:</b></td>
+            <td>This visual analytics system helps radio frequency fingerprinting-based localization system developers identify good signal features to build a reliable localization system. 
+            A good signal feature has two important properties&mdash;temporal stability and spatial variability&mdash;that can be visually identified and selected using the system.
+            After the features are selected, the system provides a visualization to help iteratively test the location classification performance of the system.
+            The most innovative aspect of this system is its multiview integration of interactive visualization and computational methods (e.g., classifiers) and its application in the indoor localization domain. 
+            This system demonstrated the applicability of visual analytics to ubiquitous computing research in the field's early days.
+            </td>
+        </tr>
+        <tr>
+            <td width="110" align="right" valign="top"><b>Publication:</b></td>
+            <td>Visual Analytics Science and Technology 2009 [<a href="papers/vast_09.pdf">paper</a>]</td>
+        </tr>
+    </table>
+    </td>
+</tr>
+</table>
+
+<div id="backgroundMask" style="position:absolute;left:0px;top:0px;width:100%;height:100%;background:#000;pointer-events:none;opacity:0.3;display:none"></div>
+<div id="zoomedView" style="position:fixed;top:0px;left:275px;background-color:white;border: #555 3px solid;display:none">
+    <img id="zoomedImage" src="images/plpvis.png" width="100%" onclick="clickZoomedImage();" style="cursor:zoom-out">
+</div>
