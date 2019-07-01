@@ -78,7 +78,13 @@ In the future, he is particularly interested in the application of visual analyt
 </table>
 <hr>
 <div>
-    <iframe id="content_frame" src="projects.html" width="1024" height="1830" frameBorder="0" scrolling="no" style="overflow:hidden"></iframe>
+    <iframe id="content_frame" src="projects.html" width="1024" frameBorder="0" scrolling="no" style="overflow:hidden"></iframe>
 </div>
+<script>
+var ios = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+if (!ios){
+    document.getElementById("content_frame").height = "1830";
+}
+</script>
 </body>
 </html>
