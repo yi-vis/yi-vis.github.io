@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<title>Yi Han</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<style>
+html, h2, h3, h4, h5, h6 {
+  font-family: "Impact";
+  margin: 0
+}
+h1{
+  font-family: "Tahoma";
+  font-weight: bold;
+}
+body {
+  font-family: "Tahoma";
+  font-size: 13px;
+}
+</style>
+<body>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-content" style="max-width:1500px">
+
+  <!-- Header -->
+  <header class="w3-panel w3-center w3-brown">
+     <h1>Yi Han</h1>
+    <!-- <div>
+      <div class="w3-bar w3-border">
+        <a href="#projects" class="w3-bar-item w3-button w3-light-grey">Projects</a>
+        <a href="#publications" class="w3-bar-item w3-button w3-light-grey">Publications</a>
+        <a href="#about" class="w3-bar-item w3-button w3-light-grey">About</a>
+      </div>
+    </div> -->
+  </header>
+
+  <!-- About Section -->
+  <div class="w3-row w3-container" id="about">
+    <!-- <h3 class="w3-text-brown">About</h3> -->
+    <div class="w3-topbar w3-border-brown">
+      <img src="images/1.png" class="w3-left w3-round w3-border w3-margin-right" style="max-height:150px">
+      <p><span class="w3-large w3-text-black w3-margin-right"><img src="images/2.png" style="max-height:30px"><br>
+      <img src="images/3.png"></span></p>
+      <p>I am a software application researcher by training with master’s and PhD degrees in Computer Science from the Georgia Institute of Technology. Between my studies, I worked as a researcher at Disney Imagineering, Massachusetts Institute of Technology (MIT), and VTT Technical Research Centre of Finland. I also have a bachelor’s degree in Information Management from National Central University in Taiwan. Currently, I am a Research Principle Engineer at Delta Electronics. </p>
+    </div>
+  </div>
+  <hr class="w3-opacity">
+
+  <!-- Projects Section -->
+  <div class="w3-row w3-container" id="projects">
+    <!-- <h3 class="w3-text-brown">Projects</h3> -->
+    <div class="w3-half w3-container">
+      <h3 class="w3-text-brown">IntiVisor</h3><h6 class="w3-text-brown">Analyzing Visualization Interactions using Visual Analytics</h6>
+      <div class="w3-topbar w3-border-brown">
+        <img src="images/intivisor.png" class="w3-image w3-round w3-border w3-padding" onclick="moreInfo(this, 'IntiVisor', 'IntiVisor is a visual analytics system that provides both flexibility and practicality with five visualization views in the analysis process of user interactions logged from visualization applications. The system visually supports the flexible event organization as well as the typical usage pattern discovery process. The event organization is innovatively supported through a set of interactive visualizations that allow an analyst to interactively determine how events should be composed and categorized into more meaningful and analysis-relevant units. After organization, usage patterns of these new units can be automatically or manually extracted with the latter views in multiple ways. IntiVisor was evaluated with visualization usages from 5 visualization applications over 4 studies.The studies showed that the system was able to support analysts in discovering a large variety of useful patterns. The project was a major part of my doctoral thesis work.<br><br>Doctoral Dissertation [<a href=\'https://smartech.gatech.edu/handle/1853/56345\' target=\'_blank\'>link</a>]<br>2016 IEEE VIS LIVVIL Workshop [<a href=\'papers/vis_16_livvil.pdf\' target=\'_blank\'>paper</a>]<br>2016 IEEE VIS The Event Event Workshop [<a href=\'papers/vis_16_event_event.pdf\' target=\'_blank\'>paper</a>]')">
+        <p>Doctoral Dissertation [<a href="https://smartech.gatech.edu/handle/1853/56345" target="_blank">link</a>]<br>
+        2016 IEEE VIS LIVVIL Workshop [<a href="papers/vis_16_livvil.pdf" target="_blank">paper</a>]<br>
+        2016 IEEE VIS The Event Event Workshop [<a href="papers/vis_16_event_event.pdf" target="_blank">paper</a>]</p>
+      </div>
+      <h3 class="w3-text-brown">CfD Visualization</h3>
+      <h6 class="w3-text-brown">Visualizing Heterogenous Behavioral and Medical Data</h6>
+      <div class="w3-topbar w3-border-brown">
+        <img src="images/cfd.png" class="w3-image w3-round w3-border w3-padding" onclick="moreInfo(this,'CfD Visualization','The CfD Visualization is an interactive visualization application that supports the day-to-day data analysis needs in the Center for Discovery (CfD).The CfD is a school that provides care to people, most of whom are children, with significant medical complexities and developmental issues. Everyday, its staff collect a large amount of heterogenous behavioral and medical data from their students. These data are then integrated and visualized with the CfD visualization to help the CfD staff make informed, data-driven decisions. The application had been deployed and integrated into the center\'s work practice for over 2.5 years and provided 3 visualization views. During the deployment, the CfD changed its work practice on collecting and analyzing data because of the availability of the visualizations. Currently, the application is regularly used by 20-30 behavioral specialists/analysts at the center.<br><br>Doctoral Dissertation [<a href=\'https://smartech.gatech.edu/handle/1853/56345\' target=\'_blank\'>link</a>]')">
+        <p>Doctoral Dissertation [<a href="https://smartech.gatech.edu/handle/1853/56345" target="_blank">link</a>]</p>
+      </div>
+      <h3 class="w3-text-brown">Visual Analytics System for Radio Frequency Fingerprinting-based Localization Systems</h3>
+      <div class="w3-topbar w3-border-brown">
+        <img src="images/plpvis.png" class="w3-image w3-round w3-border w3-padding" onclick="moreInfo(this,'Visual Analytics System for Radio Frequency Fingerprinting-based Localization Systems','This visual analytics system helps radio frequency fingerprinting-based localization system developers identify good signal features to build a reliable localization system. A good signal feature has two important properties&mdash;temporal stability and spatial variability&mdash;that can be visually identified and selected using the system. After the features are selected, the system provides a visualization to help iteratively test the location classification performance of the system. The most innovative aspect of this system is its multiview integration of interactive visualization and computational methods (e.g., classifiers) and its application in the indoor localization domain. This system demonstrated the applicability of visual analytics to ubiquitous computing research in the field\'s early days.<br><br>IEEE VAST 2009[<a href=\'papers/vast_09.pdf\' target=\'_blank\'>paper</a>][<a href=\'papers/vast_09_video.mov\' target=\'_blank\'>video</a>]')">
+        <p>IEEE VAST 2009 [<a href="papers/vast_09.pdf" target="_blank">paper</a>][<a href="papers/vast_09_video.mov" target="_blank">video</a>]</p>
+      </div>
+    </div>
+
+    <div class="w3-half w3-container">
+      <h3 class="w3-text-brown">TipoVis</h3>
+      <h6 class="w3-text-brown">Visualizing Proximal Temporal Relationships of Interval-based Events</h6>
+      <div class="w3-topbar w3-border-brown">
+        <img src="images/tipovis.png" class="w3-image w3-round w3-border w3-padding" onclick="moreInfo(this,'TipoVis','TipoVis is a visual analytic system that uses overlapping colored bars to visualize interval-based events. The system supports flexible explorations of interval-based events that occur together or within close temporal proximity. One key innovation is that the system allows an analyst to interactively specify a time window around a type of event to visualize its proximal temporal relationships with another type of event. The visualization technique was applied to visualizing social and communicative behaviors in developmental psychology research because it can effectively highlight individual multimodal coordination behaviors (e.g., gaze + speech) and dyadic interactions (e.g., give + take). In two case studies, psychology researchers obtained new understandings of their data with TipoVis.<br><br>EuroVis 2015 (Computer Graphics Forum) [<a href=\'papers/eurovis_15.pdf\' target=\'_blank\'>paper</a>][<a href=\'papers/eurovis_15_video.mov\' target=\'_blank\'>video</a>]')">
+        <p>EuroVis 2015 (Computer Graphics Forum) [<a href="papers/eurovis_15.pdf" target="_blank">paper</a>][<a href="papers/eurovis_15_video.mov" target="_blank">video</a>]</p>
+      </div>
+
+      <h3 class="w3-text-brown">Using Visualization to Explore Social and Communicative Behaviors</h3>
+      <div class="w3-topbar w3-border-brown">
+        <img src="images/behavis.png" class="w3-image w3-round w3-border w3-padding" onclick="moreInfo(this,'Using Visualization to Explore Social and Communicative Behaviors','This visual analytics system visualizes social and communicative behaviors with interconnected bar charts. The system helps developmental psychology researchers identify subgroups of children that exhibit similar behaviors at different stages of a social play protocol. In addition, researchers can use the system to compare a subgroup\'s behaviors with those from other children in the dataset. The innovative aspect of the system is the use of interconnected, interactive bar charts to explore this type of behavioral data. In this work, the system was able to show psychology researchers a new way to examine their behavioral datasets at scale.<br><br>2013 VAHC Workshop [<a href=\'papers/vahc_13.pdf\'>paper</a>]<br>2013 IEEE Infovis poster')">
+        <p>2013 VAHC Workshop [<a href="papers/vahc_13.pdf" target="_blank">paper</a>]<br>
+        2013 IEEE Infovis poster</p>
+      </div>
+
+      <h3 class="w3-text-brown">Using Text Messaging to Support Adolescents with Type 1 Diabetes</h3>
+      <div class="w3-topbar w3-border-brown">
+        <img src="images/text.png" class="w3-image w3-round w3-border w3-padding" onclick="moreInfo(this,'Using Text Messaging to Support Adolescents with Type 1 Diabetes','A 3-month randomized controlled trial was conducted to study how a text messaging system, that periodically sends two types of questions to adolescents with Type 1 diabetes, can help manage their condition. The first type of questions prompt participants about their recent symptoms (e.g., In the past 4 weeks, did you ever have times when you passed out even for a short time? N = No Y = Yes/Don\'t know). The second type of questions prompt participants about their knowledge on diabetes (e.g., If you have diabetes, you should not exercise. F=FalseT=True). Text messaging was the communication medium of this study population at the time so the study hoped to leverage adolescents\' familiarity and affinity to this mode of communication to engage them in the intervention. Afterwards, health care providers of the participants can examine the responses through a web-based dashboard. To further facilitate access to this information, the responses can be printed into a one-page visualization for at-a-glance consumption during the participants clinical visits. The study showed that the intervention group that received more text messages were able to achieve significant improvements in some quality of life measures.<br><br>Journal of Pediatric Nursing (2015) [<a href=\'http://dx.doi.org/10.1016/j.pedn.2015.02.002\' target=\'_blank\'>link</a>]')">
+        <p>Journal of Pediatric Nursing (2015) [<a href="http://dx.doi.org/10.1016/j.pedn.2015.02.002" target="_blank">link</a>]</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="detailsModal" class="w3-modal" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">&times;</span>
+    <div class="w3-container w3-modal-content w3-center w3-brown w3-padding-32 w3-animate-top">
+      <img id="detailsImage" class="w3-image w3-round w3-border" style="max-height:500px">
+      <hr class="w3-opacity">
+      <h3 id="caption" class='w3-text-white w3-brown'></h3>
+      <hr class="w3-opacity">
+      <p id="description" class='w3-container w3-justify w3-text-white w3-brown'></p>
+    </div>
+  </div>
+
+  <!-- Publications Section -->
+  <div class="w3-row w3-container" id="publications">
+    <!-- <h2>Publications</h2> -->
+    <hr class="w3-opacity">
+    <h3 class="w3-text-brown">Publications</h3>
+    <div class="w3-topbar w3-border-brown">
+      <ul>
+      <li><b>Y. Han</b>, "Understanding Visual Analysis Processes from User Interactions using Visual Analytics," Ph.D. Dissertation, Georgia Institute of Technology, Atlanta, GA, USA, 2016 [<a href="https://smartech.gatech.edu/handle/1853/56345" target="_blank">link</a>].
+      <li><b>Y. Han</b>, G. D. Abowd, and J. Stasko, “Requirements for Visual Interaction Analysis Systems,” IEEE VIS 2016 Workshop on Logging Interactive Visualizations & Visualizing Interaction Logs, Baltimore, MD, USA, 2016 [<a href="papers/vis_16_livvil.pdf" target="_blank">paper</a>].
+      <li><b>Y. Han</b>, G. D. Abowd, and J. Stasko, “Flexible Organization, Exploration, and Analysis of Visualization Application Interaction Events using Visual Analytics,” IEEE VIS 2016 Workshop on The Event Event: Temporal & Sequential Event Analysis, Baltimore, MD, USA, 2016. [<a href="papers/vis_16_event_event.pdf" target="_blank">paper</a>].
+      <li>A. A. O’Kane, <b>Y. Han</b>, and R. Arriaga, “Varied & Bespoke Caregiver Needs: Organizing and Communicating Diabetes Care for Children in the DIY Era,” 10th EAI International Conference on Pervasive Computing Technologies for Healthcare, Cancun, Mexico, 2016 [<a href="http://eudl.eu/doi/10.4108/eai.16-5-2016.2263272" target="_blank">link</a>].
+      <li><b>Y. Han</b>, A. Rozga, N. Dimitrova, G. D. Abowd, and J. Stasko, "Visual Analysis of Proximal Temporal Relationships of Social and Communicative Behaviors," Computer Graphics Forum (EuroVis 2015), vol. 34, no. 3, pp. 51–60, 2015 [<a href="papers/eurovis_15.pdf" target="_blank">paper</a>].
+      <li><b>Y. Han</b>, M. S. Faulkner, H. Fritz, D. Fadoju, A. Muir, G. D. Abowd, L. Head, and R. I. Arriaga, "A Pilot Randomized Trial of Text-Messaging for Symptom Awareness and Diabetes Knowledge in Adolescents With Type 1 Diabetes," Journal of Pediatric Nursing, vol. 30, no. 6, pp. 850–861, 2015 [<a href="https://dx.doi.org/10.1016/j.pedn.2015.02.002" target="_blank">link</a>].
+      <li>R. Khurana, <b>Y. Han</b>, and R. I. Arriaga, "SMSpress: An SMS research management system," 2014 6th International Conference on Mobile Computing, Applications and Services (MobiCASE), Austin, TX, USA, 2014, pp. 75–81 [<a href="https://doi.org/10.4108/icst.mobicase.2014.257791" target="_blank">link</a>].
+      <li>J. Choo, <b>Y. Han</b>, M. Hu, H. Kim, J. Nugent, F. Poggi, H. Park, and J. Stasko, "Exploring anomalies in GAStech: VAST 2014 Mini Challenge 1 and 2," 2014 IEEE Conference on Visual Analytics Science and Technology (VAST), Paris, France, 2014, pp. 347–348.
+      <li><b>Y. Han</b>, A. Rozga, J. Stasko, and G. D. Abowd, "Visual Exploration of Common Behaviors for Developmental Health," in Proceedings of the 2013 Workshop on Visual Analytics in Healthcare (VAHC), Washington, DC, USA, 2013, pp. 15–18. [<a href="papers/vahc_13.pdf" target="_blank">paper</a>]
+      <li>J. Stasko, J. Choo, <b>Y. Han</b>, M. Hu, H. Pileggi, R. Sadana, and C. D. Stolper, "CiteVis: Exploring Conference Paper Citation Data Visually," poster at the IEEE VIS 2013 Conference, Altanta, GA, USA, 2013.
+      <li><b>Y. Han</b>, A. Rozga, J. T. Stasko, and G. D. Abowd, "Using Visual Analytics to Understand Social and Communicative Behaviors," poster at the IEEE VIS 2013 Conference, Atlanta, GA, USA, 2013.
+      <li>Z. Ye, Y. Li, A. Fathi, <b>Y. Han</b>, A. Rozga, G. D. Abowd, and J. M. Rehg, "Detecting Eye Contact Using Wearable Eye-tracking Glasses," in Proceedings of the 2012 ACM Conference on Ubiquitous Computing, New York, NY, USA, 2012, pp. 699–704 [<a href="https://doi.org/10.1145/2370216.2370368" target="_blank">link</a>].
+      <li><b>Y. Han</b>, T.-J. Yun, G. D. Abowd, and R. I. Arriaga, "How to Design Persuasive Health Technologies for Adolescents with Chronic Illness?," CHI 2012 Workshop on Personal Informatics in Practice: Improving Quality of Life Through Data, Austin, TX, USA, 2012. [<a href="papers/chi_12.pdf" target="_blank">paper</a>]
+      <li><b>Y. Han</b>, A. Fathi, G. D. Abowd, and J. M. Rehg, "Automated Detection of Mutual Eye Contact and Joint Attention Using a Single Wearable Camera System," International Meeting for Autism Research (Innovative Technologies Demonstration), Toronto, Canada, 2012.
+      <li>Nazneen, <b>Y. Han</b>, R. I. Arriaga, G. D. Abowd, N. Call, and A. Findley, "An Investigation of Parent’s Ability to Report Problem Behavior," International Meeting for Autism Research (Innovative Technologies Demonstration), Philadelphia, PA, USA, 2010.
+      <li><b>Y. Han</b>, E. P. Stuntebeck, J. T. Stasko, and G. D. Abowd, "A visual analytics system for radio frequency fingerprinting-based localization," IEEE Symposium on Visual Analytics Science and Technology (VAST), Atlantic City, NJ, USA, 2009, pp. 35–42.[<a href="papers/vast_09.pdf" target="_blank">paper</a>]
+      </ul>
+    </div>
+  </div>
+  <hr class="w3-opacity">
+
+  <script>
+    function moreInfo(element, caption, description) {
+      document.getElementById("detailsImage").src = element.src;
+      document.getElementById("detailsModal").style.display = "block";
+      var captionText = document.getElementById("caption");
+      var descriptionText = document.getElementById("description");
+      captionText.innerHTML = caption;
+      descriptionText.innerHTML = description;
+    }
+  </script>
+</body>
+</html>
